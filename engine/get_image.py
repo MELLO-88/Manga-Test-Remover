@@ -8,4 +8,4 @@ def get_image_width(image_path):
 def get_image_height(image_path):
     image = Image.open(image_path)
     height = image.height
-    return height * 0.016
+    return height * 0.05

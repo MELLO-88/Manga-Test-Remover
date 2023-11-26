@@ -6,9 +6,9 @@ from engine.detect_text import detect_text
 from engine.get_image import get_image_height,get_image_width
 from engine.find_paragraph import find_paragraph
 from engine.draw_rectangles import draw_rectangles
+from engine.list_folders import list_folders
 
-
-folder_path = "C:/Users/kaung/OneDrive/Desktop/Manga/Testing data/Tokyo Ghoul/Chapter 1"
+folder_path = 'C:/Users/kaung/Downloads/Telegram Desktop/Tokyo Ghoul/Tokyo Ghoul'
 output_path = "C:/Users/kaung/OneDrive/Desktop/Manga/Testing data/Result/Tokyo Ghoul"
 
 def main(folder_path,output_path):
@@ -41,4 +41,8 @@ def main(folder_path,output_path):
 
 
 if __name__ == '__main__':
-    main(folder_path,output_path)
+    folder_list = list_folders(folder_path)
+    for i in folder_list:
+        location = join_file_path(folder_path,i)
+        print(location)
+        main(location, output_path)
