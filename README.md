@@ -27,8 +27,13 @@ cd Manga-Test-Remover
 3. Install the required libraries:
 
 ```markdown
-pip install Pillow easyocr torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+pip install Pillow easyocr 
 ```
+
+```markdown
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+```
+
 
 ## Usage
 To use Manga Text Remover, follow these steps:
